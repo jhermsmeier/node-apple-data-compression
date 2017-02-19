@@ -1,0 +1,33 @@
+{
+  "name": "apple-data-compression",
+  "version": "0.0.0",
+  "description": "Apple Data Compression (ADC) Scheme",
+  "license": "MIT",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
+  "keywords": [
+    "apple",
+    "adc",
+    "udif",
+    "disk",
+    "image",
+    "disk-image",
+    "dmg",
+    "ndif"
+  ],
+  "main": "lib/adc.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "homepage": "https://github.com/jhermsmeier/node-apple-data-compression",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhermsmeier/node-apple-data-compression.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-apple-data-compression/issues"
+  },
+  "scripts": {
+    "test": "mocha --ui tdd"
+  }
+}
