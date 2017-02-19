@@ -4,6 +4,9 @@
 [![npm downloads](https://img.shields.io/npm/dm/apple-data-compression.svg?style=flat-square)](https://npmjs.com/package/apple-data-compression)
 [![build status](https://img.shields.io/travis/jhermsmeier/node-apple-data-compression.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-apple-data-compression)
 
+The Apple Data Compression (ADC) scheme relies on both [run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
+and pointing to data in a [sliding dictionary](https://en.wikipedia.org/wiki/Dictionary_coder).
+
 ## Install via [npm](https://npmjs.com)
 
 ```sh
