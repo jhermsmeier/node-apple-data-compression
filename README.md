@@ -15,7 +15,7 @@ $ npm install --save apple-data-compression
 
 ## Related Modules
 
-- [Apple Disk Image](https://github.com/jhermsmeier/node-udif)
+- [Apple Universal Disk Image Format](https://github.com/jhermsmeier/node-udif)
 
 ## Usage
 
