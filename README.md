@@ -13,6 +13,10 @@ and pointing to data in a [sliding dictionary](https://en.wikipedia.org/wiki/Dic
 $ npm install --save apple-data-compression
 ```
 
+## Related Modules
+
+- [Apple Disk Image](https://github.com/jhermsmeier/node-udif)
+
 ## Usage
 
 ```js
@@ -20,11 +24,5 @@ var adc = require( 'apple-data-compression' )
 ```
 
 ```js
-adc.createCompressor( options ) => DuplexStream
-adc.createDecompressor( options ) => DuplexStream
-```
-
-```js
-adc.compress( buffer ) => Buffer
 adc.decompress( buffer ) => Buffer
 ```
