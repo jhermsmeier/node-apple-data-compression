@@ -27,7 +27,7 @@ suite( 'ADC', function() {
     assert.ok( result.equals( expected ), 'result != expected' )
   })
 
-  test( '.compress()', function() {
+  test.skip( '.compress()', function() {
     var buffer = fs.readFileSync( path.join( __dirname, 'data', 'adc-decompressed.bin' ) )
     var expected = fs.readFileSync( path.join( __dirname, 'data', 'adc-compressed.bin' ) )
     var result = adc.compress( buffer )
