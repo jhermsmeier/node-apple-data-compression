@@ -46,7 +46,36 @@ bench( `ADC.getOffset() ⨉ ${ITERATIONS}`, function( run ) {
 
 })
 
-bench( 'decompress 256KB ⨉ 4', function( run ) {
+bench( `horspool() ⨉ ${ITERATIONS}`, function( run ) {
+
+  var horspool = require( '../lib/horspool' )
+  var haystack = new Buffer( '800010008301000003140b2407830200', 'hex' )
+  var needle = new Buffer( '0b2407', 'hex' )
+  var index = -1
+
+  run.start()
+  for( var i = 0; i < ITERATIONS; i++ ) {
+    index = horspool( haystack, needle )
+  }
+  run.end()
+
+})
+
+bench( `Buffer.indexOf() ⨉ ${ITERATIONS}`, function( run ) {
+
+  var haystack = new Buffer( '800010008301000003140b2407830200', 'hex' )
+  var needle = new Buffer( '0b2407', 'hex' )
+  var index = -1
+
+  run.start()
+  for( var i = 0; i < ITERATIONS; i++ ) {
+    index = haystack.indexOf( needle )
+  }
+  run.end()
+
+})
+
+bench( 'decompress 112KB -> 256KB ⨉ 4', function( run ) {
 
   var filename = path.join( __dirname, '..', 'test', 'data', 'adc-compressed.bin' )
   var buffer = fs.readFileSync( filename )
@@ -55,6 +84,20 @@ bench( 'decompress 256KB ⨉ 4', function( run ) {
   run.start()
   for( var i = 0; i < 4; i++ ) {
     result = adc.decompress( buffer )
+  }
+  run.end()
+
+})
+
+bench.skip( 'compress 256KB ⨉ 4', function( run ) {
+
+  var filename = path.join( __dirname, '..', 'test', 'data', 'adc-compressed.bin' )
+  var buffer = fs.readFileSync( filename )
+  var result = null
+
+  run.start()
+  for( var i = 0; i < 4; i++ ) {
+    result = adc.compress( buffer )
   }
   run.end()
 
