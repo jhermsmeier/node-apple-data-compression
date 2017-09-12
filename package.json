@@ -18,7 +18,7 @@
   "main": "lib/adc.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~3.2.0",
+    "mocha": "^3.5.3",
     "nanobench": "^2.1.0"
   },
   "peerDependencies": {},
