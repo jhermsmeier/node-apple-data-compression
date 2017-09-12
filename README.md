@@ -23,6 +23,21 @@ $ npm install --save apple-data-compression
 var adc = require( 'apple-data-compression' )
 ```
 
+### Sync decompression
+
 ```js
-adc.decompress( buffer ) => Buffer
+var result = adc.decompress( buffer )
+```
+
+### Streaming
+
+```js
+var transform = new adc.Decompressor()
+// OR var transform = adc.createDecompress()
+
+fs.createReadStream( filename )
+  .pipe( transform )
+  .on( 'data', ( chunk ) => {
+    // ...
+  })
 ```
