@@ -12,13 +12,13 @@ const DECOMPRESSED_DATA = fs.readFileSync( DECOMPRESSED_DATA_PATH )
 suite( 'ADC', function() {
 
   test( '.getOffset( buffer[2] )', function() {
-    var buffer = new Buffer([ 0x10, 0x00 ])
+    var buffer = Buffer.from([ 0x10, 0x00 ])
     var offset = adc.getOffset( buffer, 0 )
     assert.strictEqual( offset, 0 )
   })
 
   test( '.getOffset()', function() {
-    var buffer = new Buffer([ 0x40, 0xFF, 0xFF ])
+    var buffer = Buffer.from([ 0x40, 0xFF, 0xFF ])
     var offset = adc.getOffset( buffer, 0 )
     assert.strictEqual( offset, 65535 )
   })

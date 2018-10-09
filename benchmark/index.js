@@ -35,7 +35,7 @@ bench( `ADC.getChunkLength() ⨉ ${ITERATIONS}`, function( run ) {
 
 bench( `ADC.getOffset() ⨉ ${ITERATIONS}`, function( run ) {
 
-  var value = new Buffer( '800010008301000003140b2407830200', 'hex' )
+  var value = Buffer.from( '800010008301000003140b2407830200', 'hex' )
   var type = null
 
   run.start()
